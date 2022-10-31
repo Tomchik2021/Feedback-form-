@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Poppins", sans-serif;
+}
+body{
+	display: flex;
+    padding: 0 10px;
+    min-height: 100vh;
+    background: #0D6EFD;
+    align-items: center;
+    justify-content: center;
+}
+::selection {
+    color: #fff;
+    background: #0D6EFD;
+}
+.wrapper{
+	width: 720px;
+	background: #fff;
+	border-radius: 5px;
+}
+.wrapper header {
+    font-size: 22px;
+    font-weight: 600;
+    padding: 20px 30px;
+    border-bottom: 1px solid #ccc;
+}
+.wrapper form {
+    margin: 35px 30px;
+}
+form .dbl-field {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+    justify-content: space-between;
+}
+.dbl-field .field {
+    height: 50px;
+    position: relative;
+    width: calc(100% / 2 - 13px);
+}
+form .field input, form .message textarea {
+    width: 100%;
+    height: 100%;
+    outline: none;
+    padding: 0 18px 0 48px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+form .field input::placeholder,
+form .message textarea::placeholder{
+	color: #ccc;
+}
+form .field input:focus,
+form .message textarea:focus{
+	border: 2px solid #0D6EFD;
+}
+.wrapper form i {
+    position: absolute;
+    top: 50%;
+    left: 18px;
+    color: #ccc;
+    font-size: 17px;
+    pointer-events: none;
+    transform: translateY(-50%);
+}
+form .field input:focus ~ i{
+	color: #0D6EFD;
+}
+form .message {
+    position: relative;
+}
+form .message i {
+    top: 20px;
+    font-size: 20px;
+}
+form .message textarea {
+    min-height: 120px;
+    max-height: 230px;
+    max-width: 100%;
+    min-width: 100%;
+    padding: 15px 20px 0 48px;
+}
+form .button-area {
+    margin: 25px 0;
+    display: flex;
+    align-items: center;
+}
+.button-area button {
+    color: #fff;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 13px 25px;
+    background: #0D6EFD;
+    transition: background 0.3s ease;
+}
+.button-area span {
+    font-size: 17px;
+    margin-left: 30px;
+    display: none;
+}
+@media(max-width: 600px){
+.wrapper header{
+	text-align: center;
+}
+form .dbl-field{
+	margin-bottom: 20px;
+	flex-direction: column;
+}
+.dbl-field .field{
+	width: 100%;
+	height: 45px;
+    margin-bottom: 20px
+}
+.button-area button{
+	width:  100%;
+}
+form .button-area{
+	flex-direction: column;
+}
+.button-area span {
+text-align: center;
+margin: 20px 0;
+}
